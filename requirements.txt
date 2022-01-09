@@ -1,6 +1,5 @@
 tweepy
 requests
 flask
-random
 time
 
