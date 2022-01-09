@@ -391,12 +391,13 @@ client = tweepy.Client(consumer_key=CONSUMER_KEY,
                        access_token=ACCESS_KEY,
                        access_token_secret=ACCESS_SECRET)
 
-while True:     
-    print('generating tweet....')
-    response = client.create_tweet(text=selectTweet(g.order))
-    print(response)
-    #print('sleep')
-    time.sleep(3600) 
+def tweet_quote():
+    while True:     
+        print('generating tweet....')
+        response = client.create_tweet(text=selectTweet(g.order))
+        print(response)
+        #print('sleep')
+        time.sleep(3600) 
 
 
 #response = client.create_tweet(text=selectTweet(g.order))
