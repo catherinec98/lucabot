@@ -4,7 +4,7 @@ import random
 import time
 import sys
 import tweepy
-import credentials
+#import credentials
 #import urllib.request
 import copy
 from os import environ
