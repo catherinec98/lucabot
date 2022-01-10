@@ -398,15 +398,14 @@ def tweet_quote():
         #response=selectTweet(g.order)
         response = client.create_tweet(text=selectTweet(g.order))
         print(response)
-        time.sleep(1000) 
+        time.sleep(1000)
         print('wake up')
-        time.sleep(1000) 
+        time.sleep(1000)
         print('wake up again')
-        time.sleep(1000) 
+        time.sleep(1000)
         print('wake up please')
         #print('sleep')
-        time.sleep(600) 
-
+        time.sleep(600)
 
 #response = client.create_tweet(text=selectTweet(g.order))
 
