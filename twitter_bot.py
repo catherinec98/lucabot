@@ -23,7 +23,6 @@ CONSUMER_SECRET = environ['CONSUMER_SECRET']
 ACCESS_KEY = environ['ACCESS_KEY']
 ACCESS_SECRET = environ['ACCESS_SECRET']
 
-
 '''
 
 def get_quotes():
@@ -356,7 +355,7 @@ g.imageQueue = copy.copy(g.imageMasterList)
 
 g.latestTweet = ""
 
-g.order = 0
+g.order = 1
 
 def selectQuote(quoteQueue, latestTweet):
     if len(quoteQueue) == 0:
@@ -385,19 +384,24 @@ def selectTweet(order):
     else:
         g.order+=1
         return selectImg(g.imageQueue, g.latestTweet)
+ 
         
 client = tweepy.Client(consumer_key=CONSUMER_KEY,
                        consumer_secret=CONSUMER_SECRET,
                        access_token=ACCESS_KEY,
                        access_token_secret=ACCESS_SECRET)
 
+
 def tweet_quote():
     while True:     
         print('generating tweet....')
+        #response=selectTweet(g.order)
         response = client.create_tweet(text=selectTweet(g.order))
         print(response)
+        time.sleep(150) 
+        print('wake up')
         #print('sleep')
-        time.sleep(3600) 
+        time.sleep(150) 
 
 
 #response = client.create_tweet(text=selectTweet(g.order))
