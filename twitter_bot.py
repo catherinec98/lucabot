@@ -407,6 +407,8 @@ def tweet_quote():
         #print('sleep')
         time.sleep(600)
 
+if __name__ == "__main__":
+    tweet_quote()
 #response = client.create_tweet(text=selectTweet(g.order))
 
 #print(response)
